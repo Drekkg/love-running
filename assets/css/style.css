@@ -171,6 +171,15 @@ main {
   padding: 5%;
   color: #3a3a3a;
 }
+/* meet-up times*/
+#meet-ups {
+
+}
+#meet-ups > h2 {
+  text-align: center;
+}
+
+
 
 /* media query for bigger screens */
 
