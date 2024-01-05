@@ -111,6 +111,8 @@ main {
   /* make main element take up any surplus space and push the footer down */
   flex: 1 0 auto;
   margin-top: 47px;
+  display: flex;
+  flex-direction: column;
 }
 
 /*Hero image*/
@@ -213,6 +215,63 @@ main {
 #photos {
   line-height: 0;
 }
+/* signup page */
+#signup {
+  background-image: url("../images/signup-image.webp");
+  background-size: cover;
+  background-position: 75%;
+  padding: 20px 10% 0 10%;
+  flex-grow: 1;
+}
+#signup-form {
+  color: #ffffff;
+  background-color: rgba(60, 60, 60, .6);
+  padding: 30px;
+  
+}
+#signup-form > h2 {
+color: #ffffff;
+padding:30px;
+}
+/* .text-input {
+  margin: 5px 0 20px 0; 
+  border: solid 1px #ffffff;
+  border-radius: 2px;
+} */
+.text-input {
+  background: transparent;
+  color: #fafafa;
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #fafafa;
+  border-radius: 2px;
+  padding: 0 5px;
+}
+.radio_buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.join-button {
+  margin-top: 20px;
+  border-radius: 2px;
+  padding: 15px 32px;
+  font-size: 100%;
+  background-color: #454b1b;
+  color: #fafafa;
+}
+
+
+
+/* media queries for larger or landscape phones */
+
+@media screen and (min-width: 576px){
+  #photos {
+    column-count: 2;
+    column-gap: 0; 
+  }
+}
 
 /* media query for bigger screens */
 @media screen and (min-width: 768px) {
@@ -262,11 +321,33 @@ main {
     text-align: end;
     align-self: flex-end;
   }
+  #photos {
+    column-count: 3;
+    column-gap: 0;
+
+  }
+  #signup {
+    background-position: center;
+    position: relative;
+  }
+  #signup-form {
+    position: absolute;
+    top: 150px;
+    left: 10%;
+    max-width: 400px;
+  }
+  .join-button:hover {
+      color: #4541b1;
+      background-color: #ffffff;
+  }
 }
 /* large devices*/
 @media screen and (min-width: 992px) {
   #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
+  }
+  #photos {
+    column-count: 4;
   }
 }
 /* larger screeens*/
